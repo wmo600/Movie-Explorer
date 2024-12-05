@@ -1,0 +1,22 @@
+{
+  "name": "movie-explorer",
+  "version": "1.0.0",
+  "description": "Explore different movies",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm start --prefix server\" \"npm start --prefix client\"",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "install-all": "npm install --prefix server && npm install --prefix client",
+    "clean": "rimraf client/node_modules backend/node_modules",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client"
+  },
+  "keywords": [],
+  "author": "Win Moe Oo",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "rimraf": "^6.0.1"
+  }
+}
